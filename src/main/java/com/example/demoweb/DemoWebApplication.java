@@ -9,8 +9,6 @@ public class DemoWebApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoWebApplication.class, args);
-		PostsViewController post = new PostsViewController();
-		post.list();
 	}
 
 }
