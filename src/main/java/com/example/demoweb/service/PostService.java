@@ -9,12 +9,12 @@ import java.util.Date;
 
 @Service
 public class PostService {
-    ArrayList<Post> posts = new ArrayList<Post>(Arrays.asList(new Post("Добро пожаловать!", new Date()),
-                                                              new Post("Сегодня хорошая погода.", new Date()),
-                                                              new Post("На небе ни облачка", new Date())));
+    ArrayList<Post> posts = new ArrayList<Post>(Arrays.asList(new Post(1L,"Добро пожаловать!", new Date()),
+                                                              new Post(2L,"Сегодня хорошая погода.", new Date()),
+                                                              new Post(3L,"На небе ни облачка", new Date())));
 
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post(Long.valueOf(posts.size() + 1),text, new Date()));
     }
 
     public ArrayList<Post> listOfPosts(){
