@@ -14,7 +14,7 @@ public class PostCreateController {
     PostService postService;
     @RequestMapping(path = "/new", method = RequestMethod.GET)
     public String create(Model model) {
-        model.addAttribute("posts", postService.listOfPosts());
+        model.addAttribute("posts", postService.listAllPosts());
         return "create";
     }
 
